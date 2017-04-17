@@ -1,7 +1,7 @@
 # MINI SUMO
 Create autonmous robot that can find other robots in the ring and push them off.
 
-A [link](https://en.wikipedia.org/wiki/Robot-sumo "Sumo wiki").
+[Sumo wiki](https://en.wikipedia.org/wiki/Robot-sumo "Sumo wiki").
 
 
 # TODO
@@ -14,8 +14,8 @@ A [link](https://en.wikipedia.org/wiki/Robot-sumo "Sumo wiki").
 * Basic test seek and destroy
 
 ## Datasheets
-* A [link](https://www.arduino.cc/documents/datasheets/H-bridge_motor_driver.PDF "L293D datasheet")
-* A[link](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf "HCSR04 datasheet")
+* [L293D datasheet](https://www.arduino.cc/documents/datasheets/H-bridge_motor_driver.PDF "L293D datasheet")
+* [HCSR04 datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf "HCSR04 datasheet")
 
 ## Technical info L293D
 
