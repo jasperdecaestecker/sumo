@@ -6,6 +6,12 @@
 #define MotorRight1 13
 #define MotorRight2 12
 
+#define triggerPin 6 // Start echo
+#define echoPin 7 // listen to distance
+
+#define LineSensor1 2
+#define LineSensor2 3
+
 void setup() {
  pinMode(EnableLeft, OUTPUT);
  pinMode(EnableRight, OUTPUT);
@@ -15,13 +21,35 @@ void setup() {
  pinMode(MotorLeft1, OUTPUT);
  pinMode(MotorLeft2, OUTPUT);
  
+ pinMode(LineSensor1, INPUT);
+ pinMode(LineSensor2, INPUT);
+ 
+ pinMode(triggerPin, OUTPUT);
+ pinMode(echoPin, INPUT);
+ 
  stop();
  Serial.begin(9600);
 }
 
 void loop() {
-if (Serial.available())
-  {
+  listenToSerialInputMotors();
+  
+  int distance = getDistance(200);
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  
+  boolean val1 = digitalRead(LineSensor1); // read the input pin
+  Serial.print("Sensor1: ");
+  Serial.println(val1);   
+  
+  boolean val2 = digitalRead(LineSensor2); // read the input pin
+  Serial.print("Sensor2: ");
+  Serial.println(val2);  
+}
+
+void listenToSerialInputMotors() {
+  if (Serial.available()) {
    char character = Serial.read();
     if(character == 'f') {
       Serial.println("Going forward");
@@ -90,4 +118,15 @@ void disableMotors() {
 
 void stop() {
   disableMotors();
+}
+
+int getDistance(int delayBetweenMeasures) {
+  digitalWrite(triggerPin, LOW);
+  delay(delayBetweenMeasures);
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  
+  long duration = pulseIn(echoPin, HIGH);
+  return duration * 0.034/2;
 }

@@ -5,12 +5,17 @@ A [link](https://en.wikipedia.org/wiki/Robot-sumo "Sumo wiki").
 
 
 # TODO
-* ~~Figure out Motor control~~
+* ~~Figure out Motor control L293D~~
 * Figure out Motor PWM speed
-* Figure out Distance sensor HC-SR04
-* Figure out line sensor 
+* ~~Figure out Distance sensor HC-SR04~~
+* ~~Figure out line sensor~~
 * Fit everything inside 10 x 10 cm base
+* Basic test keep robot in ring
+* Basic test seek and destroy
 
+## Datasheets
+* A [link](https://www.arduino.cc/documents/datasheets/H-bridge_motor_driver.PDF "L293D datasheet")
+* A[link](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf "HCSR04 datasheet")
 
 ## Technical info L293D
 
