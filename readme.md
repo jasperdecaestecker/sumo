@@ -1,14 +1,14 @@
-# MINI SUMO
+# Mini Sumo
 Create autonmous robot that can find other robots in the ring and push them off.
 
 [Sumo wiki](https://en.wikipedia.org/wiki/Robot-sumo "Sumo wiki").
 
 
-# TODO
+## Todo
 * ~~Figure out Motor control L293D~~
 * Figure out Motor PWM speed
 * ~~Figure out Distance sensor HC-SR04~~
-* ~~Figure out line sensor~~
+* ~~Figure out line sensor tcrt5000~~
 * Fit everything inside 10 x 10 cm base
 * Basic test keep robot in ring
 * Basic test seek and destroy
@@ -26,3 +26,6 @@ Create autonmous robot that can find other robots in the ring and push them off.
 | H		 | L       | L 		 | Fast stop  |
 | H		 | H       | H 		 | Fast stop  |
 | L		 | X       | X 		 | Fast stop  |
+
+## Schematic 
+Drawn with [Fritzing](http://fritzing.org/home/ "Link Fritzing").

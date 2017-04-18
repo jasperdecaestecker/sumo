@@ -6,8 +6,8 @@
 #define MotorRight1 13
 #define MotorRight2 12
 
-#define triggerPin 6 // Start echo
-#define echoPin 7 // listen to distance
+#define echoPin 6 // listen to distance
+#define triggerPin 7 // Start echo
 
 #define LineSensor1 2
 #define LineSensor2 3
